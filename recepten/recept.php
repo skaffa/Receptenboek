@@ -1,6 +1,26 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <title>Bladerdeeghapjes</title>
+</head>
+<body>
+    
+</body>
+</html>
+<?php include_once('assets/php/header.php') ?>
+<header id="bladerdeeg">
     <h1>Bladerdeeghapjes in kerstboomvorm met pesto</h1>
     <p>Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!<p>
+    <ul>
+        <li><img src="../assets/img/calorie.svg" alt="" />120 kcal</li>
+        <li><img src="../assets/img/chefHat.svg" alt="" />20 min. bereiding</li>
+        <li><img src="../assets/img/oven.svg" alt="">15 min. oventijd</li>
+    </ul>
 </header>
 
 <main>
