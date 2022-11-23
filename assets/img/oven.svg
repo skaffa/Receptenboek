@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    class="allerhande-icon recipe-header-time_icon__juUid svg svg--svg_oven" 
+    viewBox="0 0 24 24" width="24" height="24">
+    <use href="#svg_oven">
+        <symbol id="svg_oven" viewBox="0 0 24 24">
+            <defs>
+                <style>.cls-2{fill:none;opacity:.05}</style>
+            </defs>
+            <path d="M0 0h24v24H0z" class="cls-2"></path>
+            <path d="M0 0h24v24H0z" class="cls-2"></path>
+            <path d="M22 9V2H2v20h20V12h-2v8H5a1 1 0 01-1-1v-8a1 1 0 011-1h16a1 1 0 001-1zM4 8V4h16v4z"></path>
+            <circle cx="6" cy="6" r="1"></circle>
+            <circle cx="9" cy="6" r="1"></circle>
+            <circle cx="18" cy="6" r="1"></circle>
+            <rect width="8" height="2" x="8" y="12" rx="1"></rect>
+        </symbol>
+    </use>
+</svg>
