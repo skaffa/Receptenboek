@@ -67,17 +67,18 @@
             </ul>
         </article>
     </section>
-    
+  </main>  
     <article id="nutrition">
-        <h2>Voedingswaarden (portie)</h2>
-        <ul>
-            <li>energie 120 kcal</li>
-            <li>koolhydraten 9 g</li>
-            <li>waarvan suikers 1 g</li>
-            <li>natrium 120 mg</li>
-            <li>eiwit 3 g</li>
-            <li>vet 8 g</li>
-            <li>waarvan verzadigd 4 g</li>
-        </ul>
+        <div>
+            <h2>Voedingswaarden (portie)</h2>
+            <ul>
+                <li>energie 120 kcal</li>
+                <li>koolhydraten 9 g</li>
+                <li>waarvan suikers 1 g</li>
+                <li>natrium 120 mg</li>
+                <li>eiwit 3 g</li>
+                <li>vet 8 g</li>
+                <li>waarvan verzadigd 4 g</li>
+            </ul>
+        </div>
     </article>
-</main>
