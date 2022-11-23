@@ -48,4 +48,20 @@
 }
 #intro-text > div:last-of-type {
     margin-left: 7rem;
+
+
+
+
+#bladerdeeg {
+    background-image: url("../images/bladerdeeghapjes.jpg");
+    height: 40.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#bladerdeeg > * {
+    width: 50vw;
+    text-shadow: 0 0 6px white;
 }
