@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    background: #2b2b2b;
+    box-shadow: 0px 3px 42px 8px #000000bf;
+}
+
+nav > img {
+    margin-left: 16px;
+}
+
+#nav-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+#nav-buttons > a {
+    color: #dddddd;
+    text-decoration: none;
+    transition: .1s ease-in-out;
+    font-size: 1.15em;
+    border-radius: 8px;
+    padding: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #00000000;
+}
+
+#nav-buttons > a:hover {
+    background-color: #de901c36;
+    border-color: #cf884a;
+}
