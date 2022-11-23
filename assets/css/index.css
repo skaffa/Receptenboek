@@ -18,5 +18,19 @@
 
 #bladerdeeg > * {
     width: 50vw;
-    text-shadow: 0 0 6px white;
+    text-shadow: 0 0 5px white;
+}
+
+#recipe {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+}
+
+#nutrition {
+    background-image: url("../images/bladerdeeghapjes.jpg");
+    width: 100%;
+}
+
+#nutrition > * {
+    float: right;
 }
