@@ -73,6 +73,7 @@
 
 #nutrition {
     background-image: url("../images/bladerdeeghapjes.jpg");
+    grid-column: 1 / -1;
     width: 100%;
     min-height: 20rem;
     background-position: center;
