@@ -10,7 +10,12 @@
     <body>
         <?php include_once('assets/php/header.php') ?>
         <div id="container">
-
+            <div id="intro">
+                <div id="intro-text">
+                    <div>Inspiratie nodig?</div>
+                    <div>kies hieronder uit een van onze heerlijke recepten!</div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

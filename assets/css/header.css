@@ -3,19 +3,25 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 6px;
+    padding: 16px;
     background: #2b2b2b;
     box-shadow: 0px 3px 42px 8px #000000bf;
+    position: fixed;
+    width: fit-content;
+    margin: 12px;
+    border-radius: 16px;
 }
 
 nav > img {
-    margin-left: 16px;
+    margin-right: 16px;
 }
 
 #nav-buttons {
     display: flex;
     flex-direction: row;
-    gap: 48px;
+    gap: 8px;
+    align-items: center;
+    color: #838383;
 }
 
 #nav-buttons > a {
