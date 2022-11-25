@@ -13,7 +13,7 @@
 </body>
 </html>
 <?php include_once('../assets/php/header.php') ?>
-<header id="bladerdeeg">
+<header id="recipeName">
     <h1>Bladerdeeghapjes in kerstboomvorm met pesto</h1>
     <p>Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!<p>
     <ul>

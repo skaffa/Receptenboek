@@ -7,7 +7,7 @@
     font-family: 'Rubik', sans-serif;
 }
 
-#bladerdeeg {
+#recipeName {
     background-image: url("../images/bladerdeeghapjes.jpg");
     height: 40.5rem;
     display: flex;
@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-#bladerdeeg > * {
+#recipeName > * {
     width: 50vw;
     text-shadow: 0 0 5px white;
 }
