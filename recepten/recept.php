@@ -9,13 +9,12 @@
     <title>Bladerdeeghapjes</title>
 </head>
 <body>
-    
-</body>
-</html>
+
 <?php include_once('../assets/php/header.php') ?>
 <header id="recipeName">
     <h1>Bladerdeeghapjes in kerstboomvorm met pesto</h1>
     <p>Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!<p>
+        
     <ul>
         <li><img src="../assets/img/calorie.svg" alt="" />120 kcal</li>
         <li><img src="../assets/img/chefHat.svg" alt="" />20 min. bereiding</li>
@@ -44,6 +43,7 @@
                 </ul>
             </article>
         </div>
+
         <article id="preparation">
             <ul>
                 <li>
@@ -66,19 +66,22 @@
                 </li>
             </ul>
         </article>
+
+        <article id="nutrition">
+            <div>
+                <h2>Voedingswaarden (portie)</h2>
+                <ul>
+                    <li>energie 120 kcal</li>
+                    <li>koolhydraten 9 g</li>
+                    <li>waarvan suikers 1 g</li>
+                    <li>natrium 120 mg</li>
+                    <li>eiwit 3 g</li>
+                    <li>vet 8 g</li>
+                    <li>waarvan verzadigd 4 g</li>
+                </ul>
+            </div>
+        </article>
     </section>
-  </main>  
-    <article id="nutrition">
-        <div>
-            <h2>Voedingswaarden (portie)</h2>
-            <ul>
-                <li>energie 120 kcal</li>
-                <li>koolhydraten 9 g</li>
-                <li>waarvan suikers 1 g</li>
-                <li>natrium 120 mg</li>
-                <li>eiwit 3 g</li>
-                <li>vet 8 g</li>
-                <li>waarvan verzadigd 4 g</li>
-            </ul>
-        </div>
-    </article>
+</main>
+</body>
+</html>
