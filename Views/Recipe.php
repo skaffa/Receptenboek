@@ -1,13 +1,16 @@
 <?php declare(strict_types=1);
 namespace Views;
 
-use Controllers;
-require_once('../Controllers/Recipe.php');
+use Controllers\RecipeController;
+
+require_once('../Controllers/RecipeController.php');
 
 $replace = [
+    '{recipeId}',
     '{recipePageTitle}',
     '{recipeTitle}',
     '{recipeSubTitle}',
+    '{imageLinkOne}',
     '{calories}',
     '{prepTime}',
     '{bakeTime}',
@@ -19,7 +22,7 @@ $replace = [
 ];
 
 // get Recipe
-$recipe = \Controllers\Recipe::getRecipeById(1);
+$recipe = RecipeController::getRecipeById(1);
 
 $template = file_get_contents(__DIR__.'/../Templates/Recipe.html');
 echo str_replace($replace, $recipe, $template);

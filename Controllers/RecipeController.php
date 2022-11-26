@@ -1,23 +1,26 @@
 <?php declare(strict_types=1);
 namespace Controllers;
 
-use Models;
+use Models\Recipe;
 require_once('../Models/Recipe.php');
 
-class Recipe {
+class RecipeController {
     public static function getRecipeById(int $id) {
-        $recipe = \Models\Recipe::getRecipeById($id);
-
-        foreach($recipe as $key => $value) {
+        $recipe = Recipe::getRecipeById($id);
+        $replace = [];
+        foreach($recipe[0] as $key => $value) {
+            
             if (is_array($value)){
                 $str = '';
                 foreach($value as $k => $v) {
                     $str .= "<li>$v</li>";
                 }
-                $recipe[$key] = $str;
+                $replace[$key] = $str;
+            } else {
+                $replace[$key] = $value;
             }
         }
 
-        return $recipe;
+        return $replace;
     }
 }

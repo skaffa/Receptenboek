@@ -17,17 +17,20 @@
         </div>
     </nav>
 <header id="recipeName">
-    <h1>{recipeTitle}</h1>
-    <p>{recipeSubTitle}</p>
-        
-    <ul>
-        <li><img src="../assets/img/calorie.svg" alt="" />{calories}</li>
-        <li><img src="../assets/img/chefHat.svg" alt="" />{prepTime}</li>
-        <li><img src="../assets/img/oven.svg" alt="">{bakeTime}</li>
-    </ul>
+    <div>
+        <h1>{recipeTitle}</h1>
+        <p>{recipeSubTitle}</p>
+            
+        <ul>
+            <li><img src="../assets/img/calorie.svg" alt="" />{calories}</li>
+            <li><img src="../assets/img/chefHat.svg" alt="" />{prepTime}</li>
+            <li><img src="../assets/img/oven.svg" alt="">{bakeTime}</li>
+        </ul>
+    </div>
+    <img src="{imageLinkOne}" alt="" />
 </header>
 
-<main>
+<main id="{recipeId}">
     <section id="recipe">
         <div>
             <article id="ingredients">
@@ -46,12 +49,16 @@
         </div>
 
         <article id="preparation">
+            <h2>Bereiding</h2>
             <ul>
                 {preparation}
             </ul>
         </article>
 
         <article id="nutrition">
+            <div>
+                <img src="{imageLinkOne}" alt="" />
+            </div>
             <div>
                 <h2>Voedingswaarden (portie)</h2>
                 <ul>
