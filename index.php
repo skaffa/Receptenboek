@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Receptenboek</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="assets/css/index.css" rel="stylesheet">
@@ -15,6 +15,9 @@
                     <div>Inspiratie nodig?</div>
                     <div>kies hieronder uit een van onze heerlijke recepten!</div>
                 </div>
+            </div>
+            <div id="recipes-preview">
+                
             </div>
         </div>
     </body>
