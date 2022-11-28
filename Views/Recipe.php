@@ -10,7 +10,7 @@ $replace = [
     '{recipePageTitle}',
     '{recipeTitle}',
     '{recipeSubTitle}',
-    '{imageLinkOne}',
+    '{imageLink}',
     '{calories}',
     '{prepTime}',
     '{bakeTime}',
