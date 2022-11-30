@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-require_once('../Controllers/RecipeController.php');
+require_once(__DIR__ . '/../Controllers/RecipeController.php');
 
 $replace = [
     '{recipeId}',
