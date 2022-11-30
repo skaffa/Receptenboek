@@ -40,12 +40,26 @@
     font-family: trans;
     font-size: 2.15em;
     color: #cffcff;
+    user-select: none;
     
 }
 
 #intro-text > div:first-of-type {
     margin-left: 3rem;
 }
+
 #intro-text > div:last-of-type {
     margin-left: 7rem;
 }
+
+#recipes-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: calc(100vh * 10);
+    width: 100vw;
+    /* background: url('../img/tiles.jpg');
+    background-repeat: repeat; */
+}
+
+

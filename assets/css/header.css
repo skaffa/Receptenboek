@@ -15,6 +15,7 @@ nav {
 
 nav > img {
     margin-right: 16px;
+    user-select: none;
 }
 
 #nav-buttons {
@@ -35,6 +36,7 @@ nav > img {
     border-width: 1px;
     border-style: solid;
     border-color: #00000000;
+    user-select: none;
 }
 
 #nav-buttons > a:hover {
