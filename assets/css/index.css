@@ -47,6 +47,7 @@
 #intro-text > div:first-of-type {
     margin-left: 3rem;
 }
+
 #intro-text > div:last-of-type {
     margin-left: 7rem;
 }
@@ -54,8 +55,7 @@
 #recipes-preview {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
     height: calc(100vh * 10);
     width: 100vw;
     /* background: url('../img/tiles.jpg');
@@ -63,22 +63,3 @@
 }
 
 
-
-
-
-
-/* Recepten pagina (Voor de recepten pagina kan je misschien beter een apart css bestand maken)*/
-
-#bladerdeeg {
-    background-image: url("../images/bladerdeeghapjes.jpg");
-    height: 40.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#bladerdeeg > * {
-    width: 50vw;
-    text-shadow: 0 0 6px white;
-}

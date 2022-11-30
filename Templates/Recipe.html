@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../assets/css/recipe.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <title>{recipePageTitle}</title>
+</head>
+<body>
+    <nav>
+        <img src="/assets/img/logo.svg" width="55rem" alt="logo">
+        <div id="nav-buttons">
+            <a href="/">Home</a>
+            <a href="/recepten/recept.php">Recepten</a>
+        </div>
+    </nav>
+<header id="recipeName">
+    <div>
+        <h1>{recipeTitle}</h1>
+        <p>{recipeSubTitle}</p>
+            
+        <ul>
+            <li><img src="../assets/img/calorie.svg" alt="" />{calories}</li>
+            <li><img src="../assets/img/chefHat.svg" alt="" />{prepTime}</li>
+            <li><img src="../assets/img/oven.svg" alt="">{bakeTime}</li>
+        </ul>
+    </div>
+    <img src="{imageLink}" alt="" />
+</header>
+
+<main id="{recipeId}">
+    <section id="recipe">
+        <div>
+            <article id="ingredients">
+                <h2>{portions}</h2>
+                <ul>
+                    {ingredients}
+                </ul>
+            </article>
+
+            <article id="necessary">
+                <h2>Dit heb je nodig</h2>
+                <ul>
+                    {necessary}
+                </ul>
+            </article>
+        </div>
+
+        <article id="preparation">
+            <h2>Bereiding</h2>
+            <ul>
+                {preparation}
+            </ul>
+        </article>
+
+        <article id="nutrition">
+            <div>
+                <img src="{imageLink}" alt="" />
+            </div>
+            <div>
+                <h2>Voedingswaarden (portie)</h2>
+                <ul>
+                    {nutrition}
+                </ul>
+            </div>
+        </article>
+    </section>
+</main>
+</body>
+</html>
