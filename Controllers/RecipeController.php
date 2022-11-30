@@ -1,14 +1,17 @@
 <?php declare(strict_types=1);
-namespace Controllers;
 
-use Models\Recipe;
-require_once('../Models/Recipe.php');
+require_once(__DIR__  . '/../Models/Recipe.php');
 
 class RecipeController {
     public static function getRecipeById(int $id) {
         $recipe = Recipe::getRecipeById($id);
+       
         $replace = [];
-        foreach($recipe[0] as $key => $value) {
+        $recipe->ingredients = explode(',', $recipe->ingredients);
+        $recipe->necessary = explode(',', $recipe->necessary);
+        $recipe->preparation = explode('.,', $recipe->preparation);
+        $recipe->nutrition = explode(',', $recipe->nutrition);
+        foreach($recipe as $key => $value) {
             
             if (is_array($value)){
                 $str = '';

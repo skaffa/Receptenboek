@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
-namespace Models;
+
+require_once(__DIR__.'/../Database/Database.php');
 
 class Recipe {
-    public static function getRecipeById(int $id) : array {
-        // database call
-        $file = file_get_contents(__DIR__."/../Database/Recipes.json");
-        return json_decode($file);
+    public static function getRecipeById(int $id) {
+        $row = Database::getRow(1);
+        return $row;
     }
 }

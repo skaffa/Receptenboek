@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-namespace Views;
-
-use Controllers\RecipeController;
 
 require_once('../Controllers/RecipeController.php');
 
