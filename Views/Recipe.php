@@ -12,10 +12,10 @@ $replace = [
     '{prepTime}',
     '{bakeTime}',
     '{portions}',
-    '{ingredients}',
     '{necessary}',
     '{preparation}',
-    '{nutrition}'
+    '{nutrition}',
+    '{ingredients}'
 ];
 
 // get Recipe

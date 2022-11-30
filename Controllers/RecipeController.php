@@ -23,7 +23,7 @@ class RecipeController {
                 $replace[$key] = $value;
             }
         }
-
+       
         return $replace;
     }
 }
