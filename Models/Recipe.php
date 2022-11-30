@@ -5,6 +5,7 @@ require_once(__DIR__.'/../Database/Database.php');
 class Recipe {
     public static function getRecipeById(int $id) {
         $row = Database::getRow(1);
+        
         return $row;
     }
 }
