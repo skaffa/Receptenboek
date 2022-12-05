@@ -8,7 +8,7 @@ class Recipe {
         return $row;
     }
 
-    public static function getHomeItemColumns(array ...$ids) {
+    public static function getHomeItemColumns(array $ids) {
         $rows = Database::homeItemColumns($ids);
         return $rows;
     }

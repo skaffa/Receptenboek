@@ -1,3 +1,7 @@
+<?php
+require_once('./Controllers/RecipeController.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="assets/css/index.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/header.css">
+        <script src="./assets/scripts/index.js" defer></script>
     </head>
     <body>
         <?php include_once('assets/php/header.php') ?>
@@ -17,7 +22,12 @@
                 </div>
             </div>
             <div id="recipes-preview">
-                
+                <?php 
+                    $items = RecipeController::getHomeItemColumns();
+                    foreach($items as $item){
+                        var_dump($item);
+                    }
+                ?>
             </div>
         </div>
     </body>

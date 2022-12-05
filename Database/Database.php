@@ -28,20 +28,21 @@ class Database {
 
   // image, baketime, calories, portions, title
   // static function getColums
-  public static function homeItemColumns(array ...$ids) {
+  public static function homeItemColumns(array $ids) {
     $dbh = self::connectToDB();
     $whereIs = "WHERE ";
     $len = count($ids) - 1;
 
     for ($i = 0; $i <= $len; $i++) {
-      $whereIs .= "id = $ids[$i]";
+      $id = $ids[$i];
+      $whereIs .= "id = " . $id;
       if ($i < $len ) {
-        $whereIs .= ' AND ';
+        $whereIs .= ' OR ';
       }
     }
 
     $stm = $dbh->query("SELECT imageLink, baketime, calories, portions, title
-      FROM recipes WHERE id = '" . $whereIs .  "';");
+      FROM recipes " . $whereIs .  ";")->fetchAll();
 
     return $stm;
   }

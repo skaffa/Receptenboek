@@ -10,6 +10,7 @@ class RecipeController {
         $recipe->necessary = explode(',', $recipe->necessary);
         $recipe->preparation = explode('.,', $recipe->preparation);
         $recipe->nutrition = explode(',', $recipe->nutrition);
+        
         foreach($recipe as $key => $value) {
             
             if (is_array($value)){
@@ -27,7 +28,6 @@ class RecipeController {
 
     public static function getRecipeById(int $id) : array {
         $recipe = Recipe::getRecipeById($id);
-       
         $replace = new RecipeController();
         
         return $replace->setRecipeItems($recipe);
@@ -35,7 +35,6 @@ class RecipeController {
 
     public static function getHomeItemColumns () {
         $max = Recipe::getMaxId();
-
         $ids = [];
 
         for ( $i = 0; $i < 6; $i++) {
@@ -43,6 +42,5 @@ class RecipeController {
         }
 
         return Recipe::getHomeItemColumns($ids);
-
     }
 }
