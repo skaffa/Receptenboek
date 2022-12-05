@@ -32,4 +32,17 @@ class RecipeController {
         
         return $replace->setRecipeItems($recipe);
     }
+
+    public static function getHomeItemColumns () {
+        $max = Recipe::getMaxId();
+
+        $ids = [];
+
+        for ( $i = 0; $i < 6; $i++) {
+            array_push($ids, rand(1, $max));
+        }
+
+        return Recipe::getHomeItemColumns($ids);
+
+    }
 }

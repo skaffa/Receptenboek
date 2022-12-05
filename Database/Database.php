@@ -42,5 +42,13 @@ class Database {
 
     $stm = $dbh->query("SELECT imageLink, baketime, calories, portions, title
       FROM recipes WHERE id = '" . $whereIs .  "';");
+
+    return $stm;
+  }
+
+  public static function getMaxId () : int {
+    $dbh = self::connectToDB();
+    $stm = $dbh->query("SELECT MAX(id) as max FROM recipes")->fetch();
+    return $stm['max'];
   }
 } 

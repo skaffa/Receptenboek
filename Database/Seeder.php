@@ -8,16 +8,16 @@ public static function createTables() {
 
     $dbh->query("CREATE TABLE recipes (
             id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-            pagetitle VARCHAR(20) NOT NULL,
+            pagetitle VARCHAR(50) NOT NULL,
             title VARCHAR(50) NOT NULL,
-            subtitle VARCHAR(100),
-            imagelink VARCHAR(20),
+            subtitle VARCHAR(200),
+            imagelink VARCHAR(50),
             calories VARCHAR(20),
             preptime VARCHAR(20),
             baketime VARCHAR(20),
             portions VARCHAR(20),
             necessary VARCHAR(100),
-            preparation VARCHAR(1000),
+            preparation VARCHAR(2000),
             nutrition VARCHAR(200),
             added DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
             )");
@@ -26,7 +26,7 @@ public static function createTables() {
             id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
             ingredient VARCHAR(50) NOT NULL,
             quantity INT NOT NULL,
-            unit VARCHAR(1)
+            unit VARCHAR(10)
      )");
 
     $dbh->query("CREATE TABLE recipe_ingredients (
@@ -37,15 +37,12 @@ public static function createTables() {
 
 public static function addToDatabase() {
     $dbh = Database::connectToDB();
-    $count = $dbh->query("SELECT MAX(id) FROM test") + 1;
-    $day = 1;
-    $month = 1;
-    $year = 2022;
-    $hour = 0;
-    $minute = 0;
+    
+    $count = Database::getMaxId() + 1;
+    $date = date('Y-m-d H:i:s');
 
-    foreach (glob(__DIR__ . "/*.json") as $file) {
-      $added = create_date("$year, $month, $day, $hour, $minute");
+    foreach (glob(__DIR__ . "/../recepten/*.json") as $file) {
+      
       $f = json_decode(file_get_contents($file));
       $f = $f[0];
 
@@ -54,7 +51,7 @@ public static function addToDatabase() {
       $f->preparation = implode(',', $f->preparation);
       $f->ingredients = implode(',', $f->ingredients);
       
-      $stm = $dbh->query("INSERT INTO test 
+      $stm = $dbh->query("INSERT INTO recipes
         VALUES ('" . $count . "', '"  . $f->pageTitle . "', '" . 
           $f->title . "', '" .  
           $f->subTitle . "', '" . 
@@ -65,9 +62,8 @@ public static function addToDatabase() {
           $f->portions . "', '" . 
           $f->necessary . "', '" . 
           $f->preparation . "', '" . 
-          $f->nutrition . "', '" .
-          $added .
-          "');");
+          $f->nutrition . "', '" .     
+          $date .  "');");
 
       $a = explode(',', $f->ingredients);
      
@@ -85,29 +81,11 @@ public static function addToDatabase() {
         $dbh->query("INSERT INTO recipe_ingredients (recipe_id)
         VALUES ('" . $count . "');"); 
       }
-    }
-    $minute += 30;
-
-    if ($added < new date()) {
-      if ($minute == 60) {
-        $minute = 0;
-        $hour++;
-        if ($hour == 24) {
-          $day++;
-          $hour = 0;
-          if ($day == 30) {
-            $day = 1;
-            if ($month <= 12) {
-              $month++;
-            }
-          }
-        }
-      }
+      $count++;
     }
 
-    $count++;
   }
 }
 
-// Seeder::addToDatabase();
-Seeder::createTables();
+// Seeder::createTables();
+Seeder::addToDatabase();

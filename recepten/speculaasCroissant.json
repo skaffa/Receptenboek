@@ -1,0 +1,41 @@
+[
+    {
+        "id" : 3,
+        "pageTitle" : "Speculaas-croissantrolletjes",
+        "title" : "Speculaas-croissantrolletjes",
+        "subTitle" : "Croissantjes zijn natuurlijk altijd een goed idee. Maar deze rolletjes mét speculaaskruiden maken van het ontbijt nu echt een feestje.",
+        "imageLink" : "../assets/images/speculaasCroissant.jpg",
+        "calories" : "185 kcal",
+        "prepTime" : "20 min. bereiden",
+        "bakeTime" : "20 min. oventijd",
+        "portions" : "20 porties",
+        "ingredients" : [
+            "150 g ongezouten roomboter",
+            "150 g bakkersspeculaas",
+            "1 el koek- en speculaaskruiden",
+            "100 g lichtbruine basterdsuiker",
+            "1 blik vers super croissantdeeg",
+            "100 g zuivelspread"
+        ],
+        "necessary" : [
+            "brownievorm",
+            "bakpapier"
+        ],
+        "preparation" : [
+            "Zorg ervoor dat de roomboter op kamertemperatuur is. Verwarm de oven voor op 200 °C. Verkruimel de speculaas tot fijn kruim. Roer de koekkruiden en basterdsuiker door de boter.",
+            "Haal het croissantdeeg uit het blik en rol uit op een vel bakpapier zo, dat de lange kant naar je toe ligt. Druk de stippellijnen dicht zodat je 1 grote lap deeg hebt.",
+            "Smeer het deeg voorzichtig in met het boter-kruidenmengsel en bestrooi met de helft van het speculaaskruim, laat ca. 2 cm van de randen vrij.",
+            "Rol het deeg vanaf de lange kant strak op. Druk met je vingers de naad plat, zodat je een egale ronde rol krijgt Snijd ca. 1 cm van de uiteinden van de deegrol, deze gebruik je niet. Snijd de deegrol in 20 gelijke stukken. Plaats de deegstukken op een snijkant naast elkaar in de ingevette brownievorm. Bak in ca. 20 min. lichtbruin en gaar.",
+            "Haal de croissantrolletjes uit de oven en laat 15 min. afkoelen in de vorm. Besmeer de rolletjes met de zuivelspread en bestrooi met de rest van het speculaaskruim. Laat nog 15 min. in de vorm afkoelen."
+        ],
+        "nutrition" : [
+            "energie 185 kcal",
+            "koolhydraten 17 g",
+            "waarvan suikers 9 g",
+            "natrium 160 mg",
+            "eiwit 2 g",
+            "vet 12 g",
+            "waarvan verzadigd 7 g"
+        ]
+    }
+]
