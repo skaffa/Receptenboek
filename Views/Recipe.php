@@ -2,6 +2,8 @@
 
 require_once(__DIR__ . '/../Controllers/RecipeController.php');
 
+$id = (int) $_GET['recipeId'];
+
 $replace = [
     '{recipeId}',
     '{recipePageTitle}',
@@ -20,7 +22,7 @@ $replace = [
 ];
 
 // get Recipe
-$recipe = RecipeController::getRecipeById(13);
+$recipe = RecipeController::getRecipeById($id);
 
 $template = file_get_contents(__DIR__.'/../Templates/Recipe.html');
 echo str_replace($replace, $recipe, $template);

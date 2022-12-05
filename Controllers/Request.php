@@ -4,9 +4,9 @@ require_once(__DIR__ . '/RecipeController.php');
 
 function fetchItems() {
     $data = RecipeController::getHomeItemColumns();
-    
+    header('Content-Type: application/json');
     return json_encode($data);
 }
 
-return fetchItems();
+echo fetchItems();
 

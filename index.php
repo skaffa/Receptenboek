@@ -22,12 +22,7 @@ require_once('./Controllers/RecipeController.php');
                 </div>
             </div>
             <div id="recipes-preview">
-                <?php 
-                    $items = RecipeController::getHomeItemColumns();
-                    foreach($items as $item){
-                        var_dump($item);
-                    }
-                ?>
+                
             </div>
         </div>
     </body>
