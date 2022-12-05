@@ -20,9 +20,11 @@ require_once('./Controllers/RecipeController.php');
                     <div>Inspiratie nodig?</div>
                     <div>kies hieronder uit een van onze heerlijke recepten!</div>
                 </div>
-            </div>
-            <div id="recipes-preview">
-                
+                <div id="recipes-preview">
+                    <a class="recipe"><img src="assets/images/curry.png" alt=""><div href="#">Indische curry met kip</div></a>
+                    <a class="recipe">dwef</a>
+                    <a class="recipe">efrfe</a>
+                </div>
             </div>
         </div>
     </body>
