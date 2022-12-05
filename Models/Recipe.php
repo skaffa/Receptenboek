@@ -8,4 +8,5 @@ class Recipe {
 
         return $row;
     }
+
 }
