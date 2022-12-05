@@ -54,31 +54,10 @@
 
 #recipes-preview {
     display: flex;
-    position: absolute;
-    bottom: 3rem;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center; 
-    /* height: calc(100vh * 10); */
+    height: calc(100vh * 10);
     width: 100vw;
     /* background: url('../img/tiles.jpg');
     background-repeat: repeat; */
-}
-
-#recipes-preview > div {
-    display: inline-block;
-    background-color: rgb(255,255,255,.8);
-}
-
-#recipes-preview a:any-link {
-    color: black;
-    text-decoration: none;
-}
-
-#recipes-preview img {
-    height: 150px;
-}
-
-#recipes-preview ul {
-    display: flex;
 }
