@@ -26,9 +26,7 @@ class Database {
     return $row;
   }
 
-  // image, baketime, calories, portions, title
-  // static function getColums
-  public static function homeItemColumns(array $ids) {
+  public static function homeItemColumns(array $ids) : array {
     $dbh = self::connectToDB();
     $whereIs = "WHERE ";
     $len = count($ids) - 1;
@@ -47,9 +45,18 @@ class Database {
     return $stm;
   }
 
-  public static function getMaxId () : int {
+  public static function getMaxId() : int {
     $dbh = self::connectToDB();
     $stm = $dbh->query("SELECT MAX(id) as max FROM recipes")->fetch();
     return $stm['max'];
   }
-} 
+
+  public static function getPaginationItems(int $page) : array {
+    $dbh = self::connectToDB();
+    $stm = $dbh->query("SELECT 
+          id, imageLink, preptime, calories, portions, title
+          FROM recipes WHERE id > " . $page * 10 - 10 . 
+          " AND id <= " . $page * 10 . ";")->fetchAll();
+    return $stm;
+  }
+}

@@ -1,0 +1,14 @@
+main > section:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+}
+
+main div {
+    margin: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

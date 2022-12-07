@@ -22,7 +22,6 @@ async function fetchRandomItems() {
 }
 
 function createHomeItem(item) {
-    console.log(item);
     let div = document.createElement('div');
     let a = document.createElement('a');
     // a.classList.add('recipe');
@@ -30,7 +29,7 @@ function createHomeItem(item) {
     let img = document.createElement('img');
     img.src = "Utilities/AlbertHeijn/RecipeRipper/output/images/" + item.imageLink;
     img.alt = '';
-    
+
     let ul = document.createElement('ul');
     let li = document.createElement('li');
     li.innerText = item.preptime;
