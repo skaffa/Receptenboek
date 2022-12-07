@@ -41,7 +41,7 @@ class Database {
       }
     }
 
-    $stm = $dbh->query("SELECT id, imageLink, baketime, calories, portions, title
+    $stm = $dbh->query("SELECT id, imageLink, preptime, calories, portions, title
       FROM recipes " . $whereIs .  ";")->fetchAll();
 
     return $stm;
