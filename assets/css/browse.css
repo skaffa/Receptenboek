@@ -1,7 +1,7 @@
 main > section:first-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem
+    gap: 2rem;
 }
 
 main div {
@@ -11,4 +11,20 @@ main div {
 img {
     width: 100%;
     height: auto;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+    width: 30%;
 }
