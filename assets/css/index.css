@@ -53,13 +53,88 @@
 }
 
 #recipes-preview {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* bottom: 5rem;
+    margin: 4rem; */
+    /* background: #2f2f2f79; */
+    height: 100%;
+    border-radius: 16px;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    height: calc(100vh * 10);
+    flex-direction: row;
+    align-items: end; 
+    /* height: calc(100vh * 10); */
+    height: 300px;
     width: 100vw;
     /* background: url('../img/tiles.jpg');
     background-repeat: repeat; */
+
+    justify-content: space-evenly;
 }
 
+#recipes-preview > div {
+    display: inline-block;
+    width: calc(100vw / 6 - 2rem);
+    height: 100%;
+}
+
+#recipes-preview > div > a:hover {
+    /* box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.75); */
+    cursor: pointer;
+    /* transition: box-shadow .15s ease-in-out; */
+}
+
+#recipes-preview a:any-link {
+    color: white;
+    text-decoration: none;
+    /* box-shadow: 0px 0px 55px 4px rgba(0,0,0,0.75); */
+}
+
+#recipes-preview ul {
+    /* display: flex; */
+}
+
+#recipes-preview ul > li {
+    list-style: none;
+    /* width: 30%; */
+}
+#recipes-preview img {
+    width: 100%;
+    height: auto;
+}
+
+.recipe {
+    margin: 1rem;
+    height: 33%;
+    width: 15rem;
+    background: #00000075;
+    border-radius: inherit;
+    padding: 1rem;
+    box-shadow: 0px 0px 55px 4px rgba(0,0,0,0.75);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .15s ease-in-out;
+}
+
+.recipe::after {
+    content: 'ass';
+    color: red;
+}
+
+.recipe > img {
+    width: 100px;
+    border-radius: 16px;
+}
+
+.recipe > div {
+    color: white;
+}
+
+.recipe:hover {
+    box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
 

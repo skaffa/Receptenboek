@@ -13,12 +13,13 @@
         <img src="/assets/img/logo.svg" width="55rem" alt="logo">
         <div id="nav-buttons">
             <a href="/">Home</a>
-            <a href="/recepten/recept.php">Recepten</a>
+            <a href="/Views/BrowseRecipes.php">Recepten</a>
         </div>
     </nav>
 <header id="recipeName">
     <div>
         <h1>{recipeTitle}</h1>
+        <p>{dateAdded}</p>
         <p>{recipeSubTitle}</p>
             
         <ul>
@@ -27,7 +28,7 @@
             <li><img src="../assets/img/oven.svg" alt="">{bakeTime}</li>
         </ul>
     </div>
-    <img src="{imageLink}" alt="" />
+    <img src="../Utilities/AlbertHeijn/RecipeRipper/output/images/{imageLink}" alt="" />
 </header>
 
 <main id="{recipeId}">
@@ -57,7 +58,7 @@
 
         <article id="nutrition">
             <div>
-                <img src="{imageLink}" alt="" />
+                <img src="../Utilities/AlbertHeijn/RecipeRipper/output/images/{imageLink}" alt="" />
             </div>
             <div>
                 <h2>Voedingswaarden (portie)</h2>

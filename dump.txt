@@ -1,0 +1,112 @@
+-- MySQL dump 10.13  Distrib 8.0.31, for Linux (x86_64)
+--
+-- Host: localhost    Database: receptenboek
+-- ------------------------------------------------------
+-- Server version	8.0.31-0ubuntu0.20.04.2
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ingredients`
+--
+
+DROP TABLE IF EXISTS `ingredients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ingredients` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ingredient` varchar(50) NOT NULL,
+  `quantity` int NOT NULL,
+  `unit` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ingredients`
+--
+
+LOCK TABLES `ingredients` WRITE;
+/*!40000 ALTER TABLE `ingredients` DISABLE KEYS */;
+INSERT INTO `ingredients` VALUES (1,'rollen vers bladerdeeg',270,'g'),(2,'groene pesto',50,'g'),(3,'geraspte belegen kaas ',50,'g'),(4,'rollen vers bladerdeeg',270,'g'),(5,'groene pesto',50,'g'),(6,'geraspte belegen kaas ',50,'g'),(7,'middelgrote eieren',6,'stuks'),(8,'eetrijpe avocado',1,'stuks'),(9,'verse platte peterselie',5,'g'),(10,'mayonaise',3,'el'),(11,'citroensap',1,'tl'),(12,'wilde-zalmeitjes',20,'g'),(13,'rollen vers bladerdeeg',270,'g'),(14,'groene pesto',50,'g'),(15,'geraspte belegen kaas ',50,'g'),(16,'middelgrote eieren',6,'stuks'),(17,'eetrijpe avocado',1,'stuks'),(18,'verse platte peterselie',5,'g'),(19,'mayonaise',3,'el'),(20,'citroensap',1,'tl'),(21,'wilde-zalmeitjes',20,'g'),(22,'rollen vers bladerdeeg',270,'g'),(23,'groene pesto',50,'g'),(24,'geraspte belegen kaas ',50,'g'),(25,'middelgrote eieren',6,'stuks'),(26,'eetrijpe avocado',1,'stuks'),(27,'verse platte peterselie',5,'g'),(28,'mayonaise',3,'el'),(29,'citroensap',1,'tl'),(30,'wilde-zalmeitjes',20,'g'),(31,'rollen vers bladerdeeg',270,'g'),(32,'groene pesto',50,'g'),(33,'geraspte belegen kaas ',50,'g'),(34,'middelgrote eieren',6,'stuks'),(35,'eetrijpe avocado',1,'stuks'),(36,'verse platte peterselie',5,'g'),(37,'mayonaise',3,'el'),(38,'citroensap',1,'tl'),(39,'wilde-zalmeitjes',20,'g'),(40,'rollen vers bladerdeeg',270,'g'),(41,'groene pesto',50,'g'),(42,'geraspte belegen kaas ',50,'g'),(43,'middelgrote eieren',6,'stuks'),(44,'eetrijpe avocado',1,'stuks'),(45,'verse platte peterselie',5,'g'),(46,'mayonaise',3,'el'),(47,'citroensap',1,'tl'),(48,'wilde-zalmeitjes',20,'g'),(49,'ongezouten roomboter',150,'g'),(50,'bakkersspeculaas',150,'g'),(51,'koek- en speculaaskruiden',1,'el'),(52,'lichtbruine basterdsuiker',100,'g'),(53,'vers super croissantdeeg',1,'blik'),(54,'zuivelspread',100,'g');
+/*!40000 ALTER TABLE `ingredients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `recipe_ingredients`
+--
+
+DROP TABLE IF EXISTS `recipe_ingredients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `recipe_ingredients` (
+  `ingredient_id` int NOT NULL AUTO_INCREMENT,
+  `recipe_id` int NOT NULL,
+  PRIMARY KEY (`ingredient_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `recipe_ingredients`
+--
+
+LOCK TABLES `recipe_ingredients` WRITE;
+/*!40000 ALTER TABLE `recipe_ingredients` DISABLE KEYS */;
+INSERT INTO `recipe_ingredients` VALUES (1,1),(2,1),(3,1),(4,3),(5,3),(6,3),(7,4),(8,4),(9,4),(10,4),(11,4),(12,4),(13,5),(14,5),(15,5),(16,6),(17,6),(18,6),(19,6),(20,6),(21,6),(22,7),(23,7),(24,7),(25,8),(26,8),(27,8),(28,8),(29,8),(30,8),(31,9),(32,9),(33,9),(34,10),(35,10),(36,10),(37,10),(38,10),(39,10),(40,11),(41,11),(42,11),(43,12),(44,12),(45,12),(46,12),(47,12),(48,12),(49,13),(50,13),(51,13),(52,13),(53,13),(54,13);
+/*!40000 ALTER TABLE `recipe_ingredients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `recipes`
+--
+
+DROP TABLE IF EXISTS `recipes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `recipes` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `pagetitle` varchar(50) DEFAULT NULL,
+  `title` varchar(50) NOT NULL,
+  `subtitle` varchar(200) DEFAULT NULL,
+  `imagelink` varchar(50) DEFAULT NULL,
+  `calories` varchar(20) DEFAULT NULL,
+  `preptime` varchar(20) DEFAULT NULL,
+  `baketime` varchar(20) DEFAULT NULL,
+  `portions` varchar(20) DEFAULT NULL,
+  `necessary` varchar(100) DEFAULT NULL,
+  `preparation` varchar(2000) DEFAULT NULL,
+  `nutrition` varchar(200) DEFAULT NULL,
+  `added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `recipes`
+--
+
+LOCK TABLES `recipes` WRITE;
+/*!40000 ALTER TABLE `recipes` DISABLE KEYS */;
+INSERT INTO `recipes` VALUES (1,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(2,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(3,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(4,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(5,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(6,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(7,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(8,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(9,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(10,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(11,'bladerdeeghapjes','Bladerdeeghapjes in kerstboomvorm met pesto','Deze bladerdeeghapjes met pesto zijn perfect om uit te delen!','../assets/images/bladerdeeghapjes.jpg','120 kcal','20 min. bereiden','15 min. oventijd','12 porties','bakplaten,bakpapier,sateprikkers','Verwarm de oven voor op 180 °C.,Rol het bladerdeeg uit en snijd (voor 12 porties) in de lengte in 12 plakken van 2 cm breed,Vouw zigzaggend een reep op een met bakpapier beklede bakplaat in steeds kleinere vouwen van onder naar boven tot een kerstboompje. Je hebt in totaal 2 bakplaten nodig of bak ze in delen.,Steek de prikker (geweekt in water) vanaf het bovenste puntje door het kerstboompje zonder het deeg door te prikken. Zorg ervoor dat de prikker aan de bovenkant er niet te veel uitsteekt. Druk het deeg tegen de prikker aan.,Besmeer met de pesto en bestrooi met de kaas. Bak in het midden van de oven in ca. 15 min. gaar.','energie 120 kcal,koolhydraten 9 g,waarvan suikers 1 g,natrium 120 mg,eiwit 3 g,vet 8 g,waarvan verzadigd 4 g','2022-12-05 00:00:00'),(12,'Gevulde eieren','Gevulde eieren met avocado','Deze Hollandse classic verveelt nooit! Zeker als je ze eens vult met avocado.','../assets/images/gevuldeEieren.jpg','100 kcal','15 min. bereiden','8 min','12 porties','staafmixer met bakje,spuitzak met kartelmondje','Kook de eieren in 8 min. hard. Laat schrikken onder koud stromend water.,Pel ze en halveer in de lengte. Haal de dooiers eruit en doe deze in het bakje van de staafmixer.,Snijd ondertussen de avocado overlangs doormidden, verwijder de pit en schep het vruchtvlees in het bakje.,Houd 2 takjes peterselie apart, doe de rest ook in de hoge beker bij de eieren en avocado. Voeg ook de mayonaise en het citroensap toe. Maal fijn en breng op smaak met peper en zout.,Schep de vulling in een spuitzak en vul de eieren ermee. Leg op elk eitje een klein schepje van de zalmeitjes. Haal de blaadjes van de takjes peterselie en garneer de eitjes hiermee.','energie 100 kcal,koolhydraten 1 g,waarvan suikers 1 g,natrium 80 mg,eiwit 4 g,vet 9 g,waarvan verzadigd 2 g,vezels 1 g','2022-12-05 00:00:00'),(13,'Speculaas-croissantrolletjes','Speculaas-croissantrolletjes','Croissantjes zijn natuurlijk altijd een goed idee. Maar deze rolletjes mét speculaaskruiden maken van het ontbijt nu echt een feestje.','../assets/images/speculaasCroissant.jpg','185 kcal','20 min. bereiden','20 min. oventijd','20 porties','brownievorm,bakpapier','Zorg ervoor dat de roomboter op kamertemperatuur is. Verwarm de oven voor op 200 °C. Verkruimel de speculaas tot fijn kruim. Roer de koekkruiden en basterdsuiker door de boter.,Haal het croissantdeeg uit het blik en rol uit op een vel bakpapier zo, dat de lange kant naar je toe ligt. Druk de stippellijnen dicht zodat je 1 grote lap deeg hebt.,Smeer het deeg voorzichtig in met het boter-kruidenmengsel en bestrooi met de helft van het speculaaskruim, laat ca. 2 cm van de randen vrij.,Rol het deeg vanaf de lange kant strak op. Druk met je vingers de naad plat, zodat je een egale ronde rol krijgt Snijd ca. 1 cm van de uiteinden van de deegrol, deze gebruik je niet. Snijd de deegrol in 20 gelijke stukken. Plaats de deegstukken op een snijkant naast elkaar in de ingevette brownievorm. Bak in ca. 20 min. lichtbruin en gaar.,Haal de croissantrolletjes uit de oven en laat 15 min. afkoelen in de vorm. Besmeer de rolletjes met de zuivelspread en bestrooi met de rest van het speculaaskruim. Laat nog 15 min. in de vorm afkoelen.','energie 185 kcal,koolhydraten 17 g,waarvan suikers 9 g,natrium 160 mg,eiwit 2 g,vet 12 g,waarvan verzadigd 7 g','2022-12-05 00:00:00');
+/*!40000 ALTER TABLE `recipes` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-12-05 15:00:39
