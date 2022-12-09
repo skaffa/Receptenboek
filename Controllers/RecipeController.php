@@ -16,7 +16,11 @@ class RecipeController {
             if (is_array($value)){
                 $str = '';
                 foreach($value as $k => $v) {
-                    $str .= "<li>$v</li>";
+                    if ($v == "") {
+                        $str .= "<li>Geen baktijd</li>";
+                    } else {
+                        $str .= "<li>$v</li>";
+                    }
                 }
                 $this->replace[$key] = $str;
             } else {
@@ -33,7 +37,7 @@ class RecipeController {
         return $replace->setRecipeItems($recipe);
     }
 
-    public static function getHomeItemColumns () {
+    public static function getHomeItemColumns () : array {
         $max = Recipe::getMaxId();
         $ids = [];
 
@@ -42,5 +46,9 @@ class RecipeController {
         }
 
         return Recipe::getHomeItemColumns($ids);
+    }
+
+    public static function getPaginationItems(int $page) : array {
+        return Recipe::getPaginationItems($page);
     }
 }

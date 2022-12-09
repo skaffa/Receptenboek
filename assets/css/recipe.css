@@ -7,7 +7,6 @@ li {
 h1, h2 {
     font-weight: 900;
     text-shadow: 0 0 5px rgba(0,0,0,.8);
-    
 }
 
 h1 {
@@ -28,6 +27,7 @@ h2 {
 
 #recipeName > * {
     text-shadow: 0 0 5px white;
+    padding: 0 1rem;
 }
 
 #recipeName > div {

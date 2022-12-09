@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
     fetchRandomItems();
 });
 
-
 async function fetchRandomItems() {
     let formData = new FormData();
     formData.append('getHomeItems', 'test');
@@ -23,16 +22,17 @@ async function fetchRandomItems() {
 }
 
 function createHomeItem(item) {
-    console.log(item);
     let div = document.createElement('div');
     let a = document.createElement('a');
+    // a.classList.add('recipe');
 
     let img = document.createElement('img');
-    img.src = item.imageLink;
+    img.src = "Utilities/AlbertHeijn/RecipeRipper/output/images/" + item.imageLink;
     img.alt = '';
+
     let ul = document.createElement('ul');
     let li = document.createElement('li');
-    li.innerText = item.baketime;
+    li.innerText = item.preptime;
 
     ul.appendChild(li);
     li = document.createElement('li');
