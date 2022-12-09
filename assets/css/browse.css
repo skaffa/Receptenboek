@@ -8,6 +8,10 @@ main div {
     margin: 2rem;
 }
 
+nav > img {
+    width: 55px;
+    height: 55px;
+}
 img {
     width: 100%;
     height: auto;

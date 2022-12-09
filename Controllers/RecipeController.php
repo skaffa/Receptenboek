@@ -16,7 +16,11 @@ class RecipeController {
             if (is_array($value)){
                 $str = '';
                 foreach($value as $k => $v) {
-                    $str .= "<li>$v</li>";
+                    if ($v == "") {
+                        $str .= "<li>Geen baktijd</li>";
+                    } else {
+                        $str .= "<li>$v</li>";
+                    }
                 }
                 $this->replace[$key] = $str;
             } else {
