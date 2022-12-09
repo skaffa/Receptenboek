@@ -56,7 +56,7 @@ class Database {
     $stm = $dbh->query("SELECT 
           id, imageLink, preptime, calories, portions, title
           FROM recipes WHERE id > " . $page * 10 - 10 . 
-          " AND id <= " . $page * 10 . ";")->fetchAll();
+          " AND id <= " . $page * 40 . ";")->fetchAll();
     return $stm;
   }
 }

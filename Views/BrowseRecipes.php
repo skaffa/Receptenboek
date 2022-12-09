@@ -8,9 +8,9 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../assets/css/browse.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/browse.css"  />
+    <link rel="stylesheet" href="../assets/css/header.css" />
     <title>Document</title>
 </head>
 <body>
@@ -21,6 +21,10 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
             <a href="../Views/BrowseRecipes.php" draggable="false">Recepten</a>
         </div>
     </nav>
+    <header>
+        <h1>Alle recepten!</h1>
+        <p>Vind hier de lekkerste recepten</p>
+    </header>   
     <main>
         <section>
             <?php

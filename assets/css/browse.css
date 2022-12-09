@@ -1,30 +1,70 @@
+body {
+    background-color: #3d17e133;
+}
+
+header {
+    text-align: center;
+    background-image: url('../images/speculaasCroissant.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 0 auto;   
+    font-size: 4rem;
+    font-weight: 900;
+}
+h1, header > p {
+    text-shadow: 0 0 10px white;
+    padding: 1rem;
+}
+
+header > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
 main > section:first-child {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
 main div {
     margin: 2rem;
+   /*  padding: .5rem 1rem; */
+    border: 2px solid black;
+    border-radius: 10% / 10%;
 }
 
 nav > img {
     width: 55px;
     height: 55px;
 }
+
+a > img {
+    border-radius: 10% 10% 0 0/ 10% 10% 0 0;
+}
+
 img {
     width: 100%;
+    padding: .1rem;
     height: auto;
 }
 
 a:any-link {
     text-decoration: none;
     color: black;
+    
 }
 
 ul {
     display: flex;
     justify-content: space-around;
+    padding: .2rem .5rem;
 }
 
 li {
