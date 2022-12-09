@@ -66,7 +66,7 @@ public static function addToDatabase() {
           $date .  '");');
 
       $a = explode(',', $f->ingredients);
-     
+
       foreach($a as $i) {
         
         $str = explode(' ', $i);
