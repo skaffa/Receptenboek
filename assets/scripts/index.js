@@ -4,9 +4,11 @@ const recipesPreview = document.getElementById('recipes-preview');
 
 window.addEventListener('load', () => {
     fetchRandomItems();
+    setInterval(fetchRandomItems, 1000 * 10);
 });
 
 async function fetchRandomItems() {
+    console.log('random');
     let formData = new FormData();
     formData.append('getHomeItems', 'test');
     let res = await fetch(new Request('./Controllers/Request.php'), {
@@ -15,6 +17,10 @@ async function fetchRandomItems() {
         body: formData
     }).then(response => response.json());
     
+    while (recipesPreview.hasChildNodes()){
+        recipesPreview.removeChild(recipesPreview.firstChild);
+    }
+
     for (let r in res){ 
         createHomeItem(res[r]);
     }
@@ -22,6 +28,7 @@ async function fetchRandomItems() {
 }
 
 function createHomeItem(item) {
+    
     let div = document.createElement('div');
     let a = document.createElement('a');
     // a.classList.add('recipe');
