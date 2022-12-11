@@ -4,7 +4,7 @@ const recipesPreview = document.getElementById('recipes-preview');
 
 window.addEventListener('load', () => {
     fetchRandomItems();
-    setInterval(fetchRandomItems, 1000 * 5);
+    setInterval(fetchRandomItems, 1000 * 10);
 });
 
 async function fetchRandomItems() {
