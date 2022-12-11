@@ -12,15 +12,17 @@ class RecipeController {
         $recipe->nutrition = explode(',', $recipe->nutrition);
         $date = date_create($recipe->added);
         $recipe->added = date_format($date, 'd-m-Y');
+
+        if ($recipe->baketime == "") {
+            $recipe->baketime = 'geen baktijd';
+        }
         
         foreach($recipe as $key => $value) {
             
             if (is_array($value)){
                 $str = '';
                 foreach($value as $k => $v) {
-                    if ($v == "") {
-                        $str .= "<li>Geen baktijd</li>";
-                    } else {
+                    if ($v != "") {
                         $str .= "<li>$v</li>";
                     }
                 }

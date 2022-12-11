@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Rubik:wght@300&display=swap');
+@font-face {
+    font-family: trans;
+    src: url('../fonts/cali.otf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
 
 li {
     line-height: 3rem;
@@ -51,8 +63,9 @@ h2 {
     height: auto;
     margin: 0 4rem .5rem auto;
     grid-column-end: -1;
-    border-radius: 5% / 5%;
+    border-radius: 10% / 10%;
     box-shadow: 0 0 10px 1px black;
+    padding: 0;
 }
 
 #recipeName li {
