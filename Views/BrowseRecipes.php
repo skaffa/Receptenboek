@@ -22,7 +22,7 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
         </div>
     </nav>
     <header>
-        <h1>Alle recepten!</h1>
+        <h1>overzicht recepten!</h1>
         <p>Vind hier de lekkerste recepten</p>
     </header>   
     <main>

@@ -19,7 +19,7 @@ h1 {
 }
 h1, header > p {
     text-shadow: 0 0 10px white;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 header > p {
@@ -35,9 +35,13 @@ main > section:first-child {
 
 main div {
     margin: 2rem;
-   /*  padding: .5rem 1rem; */
     border: 2px solid black;
     border-radius: 10% / 10%;
+    background-color: white;
+}
+
+main div:hover {
+    box-shadow: 0 0 10px 5px black;
 }
 
 nav > img {
@@ -51,14 +55,12 @@ a > img {
 
 img {
     width: 100%;
-    padding: .1rem;
-    height: auto;
+    height: 85%;
 }
 
 a:any-link {
     text-decoration: none;
     color: black;
-    
 }
 
 ul {
@@ -70,5 +72,6 @@ ul {
 li {
     list-style: none;
     font-size: 1.2rem;
-    width: 30%;
+    padding-bottom: .5rem;
+    text-shadow: 0 0 1px black;
 }
