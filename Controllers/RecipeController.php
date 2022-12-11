@@ -10,6 +10,8 @@ class RecipeController {
         $recipe->necessary = explode(',', $recipe->necessary);
         $recipe->preparation = explode('.,', $recipe->preparation);
         $recipe->nutrition = explode(',', $recipe->nutrition);
+        $date = date_create($recipe->added);
+        $recipe->added = date_format($date, 'd-m-Y');
         
         foreach($recipe as $key => $value) {
             
@@ -27,6 +29,7 @@ class RecipeController {
                 $this->replace[$key] = $value;
             }
         }
+        
         return $this->replace;
     }
 

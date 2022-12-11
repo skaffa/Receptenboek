@@ -32,7 +32,6 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
 
                 foreach($recipes as $recipe) {
                     $imgSrc = "../Utilities/AlbertHeijn/RecipeRipper/output/images/" . $recipe['imageLink'];
-                    // echo $imgSrc;
                     ?>
                     <div>
                         <a href="./Recipe.php?recipeId=<?php echo $recipe["id"] ?>">
