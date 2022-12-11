@@ -4,7 +4,7 @@ const recipesPreview = document.getElementById('recipes-preview');
 
 window.addEventListener('load', () => {
     fetchRandomItems();
-    setInterval(fetchRandomItems, 1000 * 10);
+    setInterval(fetchRandomItems, 1000 * 5);
 });
 
 async function fetchRandomItems() {
@@ -18,6 +18,8 @@ async function fetchRandomItems() {
     }).then(response => response.json());
     
     while (recipesPreview.hasChildNodes()){
+        /* recipesPreview.firstChild.className = 'remove-recipe'; */
+        
         recipesPreview.removeChild(recipesPreview.firstChild);
     }
 
@@ -30,8 +32,8 @@ async function fetchRandomItems() {
 function createHomeItem(item) {
     
     let div = document.createElement('div');
+    div.classList.add('show-recipe');
     let a = document.createElement('a');
-    // a.classList.add('recipe');
 
     let img = document.createElement('img');
     img.src = "Utilities/AlbertHeijn/RecipeRipper/output/images/" + item.imageLink;
