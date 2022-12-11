@@ -41,7 +41,7 @@ class RecipeController {
     }
 
     public static function getHomeItemColumns () : array {
-        $max = Recipe::getMaxId();
+        $max = RecipeController::getMaxId();
         $ids = [];
 
         for ( $i = 0; $i < 6; $i++) {
@@ -51,6 +51,9 @@ class RecipeController {
         return Recipe::getHomeItemColumns($ids);
     }
 
+    public static function getMaxId() {
+        return Recipe::getMaxId();
+    }
     public static function getPaginationItems(int $page) : array {
         return Recipe::getPaginationItems($page);
     }

@@ -28,7 +28,9 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
     <main>
         <section>
             <?php
-                $recipes = RecipeController::getPaginationItems(1);
+                $start = isset($_GET['page']) && $_GET['page'] > 2 ? 
+                    $_GET['page'] - 1 : 1;
+                $recipes = RecipeController::getPaginationItems($start);
 
                 foreach($recipes as $recipe) {
                     $imgSrc = "../Utilities/AlbertHeijn/RecipeRipper/output/images/" . $recipe['imageLink'];
@@ -48,8 +50,56 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
             ?>
         </section>
         <section id="pagination">
-
+            <div>
+                <ul>
+                <?php
+                    $limit = 40;
+                    
+                    $page = $_GET['page'] ?? 1;
+                    
+                    $totalPages = $start + 10;
+                    if ($page > 1) {
+                        echo '<li id="previous"><a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span></a></li>';
+                    }
+                    for($i = $start; $i < $totalPages; $i++) {
+                        $num = $i;
+                        if ($num == $page) {
+                            echo '<li class="currentpage"><a href="' . "?page=${num}\">
+                            ${num}</a></li>";
+                        } else {
+                            echo '<li><a href="' . "?page=${num}\">
+                                    ${num}</a></li>";
+                        }
+                    }
+                    if ($page < $totalPages){
+                        echo '<li id="next"><a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span></a></li>';
+                    }
+                ?>
+                </ul>
+            </div>
         </section>
     </main>
+<script>
+window.addEventListener('load', () => {
+    const prevBtn = document.getElementById('previous');
+    const nextBtn = document.getElementById('next');
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            let page = <?php echo $page; ?> + 1;
+            window.location.href = `?page=${page}`;
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            let page = <?php echo $page; ?> - 1 ;
+            window.location.href = `?page=${page}`;
+        });
+    }
+});
+</script>
 </body>
 </html>
