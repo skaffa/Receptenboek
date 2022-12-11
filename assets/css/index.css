@@ -52,58 +52,6 @@
     margin-left: 7rem;
 }
 
-#recipes-preview {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    /* bottom: 5rem;
-    margin: 4rem; */
-    /* background: #2f2f2f79; */
-    height: 100%;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: end; 
-    /* height: calc(100vh * 10); */
-    height: 300px;
-    width: 100vw;
-    /* background: url('../img/tiles.jpg');
-    background-repeat: repeat; */
-
-    justify-content: space-evenly;
-}
-
-#recipes-preview > div {
-    display: inline-block;
-    width: calc(100vw / 6 - 2rem);
-    height: 100%;
-}
-
-#recipes-preview > div > a:hover {
-    /* box-shadow: 0px 0px 30px 15px rgba(0,0,0,0.75); */
-    cursor: pointer;
-    /* transition: box-shadow .15s ease-in-out; */
-}
-
-#recipes-preview a:any-link {
-    color: white;
-    text-decoration: none;
-    /* box-shadow: 0px 0px 55px 4px rgba(0,0,0,0.75); */
-}
-
-#recipes-preview ul {
-    /* display: flex; */
-}
-
-#recipes-preview ul > li {
-    list-style: none;
-    /* width: 30%; */
-}
-#recipes-preview img {
-    width: 100%;
-    height: auto;
-}
-
 .recipe {
     margin: 1rem;
     height: 33%;
@@ -138,3 +86,69 @@
     cursor: pointer;
 }
 
+#recipes-preview {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: end; 
+    height: 300px;
+    width: 100vw;
+    justify-content: space-evenly;
+    
+}
+
+#recipes-preview > div {
+    display: inline-block;
+    width: calc(100vw / 5 - 2rem);
+    height: 100%;
+}
+
+#recipes-preview div {
+    margin: 2rem;
+    border: 2px solid black;
+    border-radius: 10% / 10%;
+    background-color: white;
+}
+
+#recipes-preview div:hover {
+    box-shadow: 0 0 10px 5px black;
+}
+
+#recipes-preview a > img {
+    border-radius: 10% 10% 0 0/ 10% 10% 0 0;
+}
+
+#recipes-preview img {
+    width: 100%;
+    height: 60%;
+}
+
+#recipes-preview a:any-link {
+    text-decoration: none;
+    color: black;
+}
+
+#recipes-preview ul {
+    display: flex;
+    justify-content: space-around;
+    padding: .2rem .5rem 0;
+    border-bottom: 2px inset black;
+}
+
+#recipes-preview li, #recipes-preview p {
+    list-style: none;
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+    text-shadow: 0 0 1px black;
+}
+
+#recipes-preview p {
+    text-align: center;
+    padding: .2rem 1rem .5rem;
+    height: 3rem;
+    overflow: hidden;
+}
