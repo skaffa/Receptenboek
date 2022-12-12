@@ -27,6 +27,8 @@ h1, header > p {
 header > p {
     font-size: 1.5rem;
     font-weight: 600;
+    background-color: rgba(255,255,255,.5);
+    padding: .5rem;
 }
 
 main > section:first-child {
@@ -80,8 +82,8 @@ li {
 }
 
 li > img {
-    width: 1rem;
-    height: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 #pagination {

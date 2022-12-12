@@ -126,11 +126,6 @@ body {
         removeRecipe 1s linear 9s 1 normal forwards;
 }
 
-/* .show-recipe img {
-    animation: showRecipe 1s linear .1s 1 normal forwards,
-        removeRecipe 1s linear 4.1s 1 normal forwards;
-} */
-
 #recipes-preview div:hover {
     box-shadow: 0 0 10px 5px black;
 }
@@ -164,8 +159,9 @@ body {
 }
 
 #recipes-preview li > img {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-top: .2rem;
     padding-right: .2rem;
 }
 

@@ -8,7 +8,6 @@ window.addEventListener('load', () => {
 });
 
 async function fetchRandomItems() {
-    console.log('random');
     let formData = new FormData();
     formData.append('getHomeItems', 'test');
     let res = await fetch(new Request('./Controllers/Request.php'), {
@@ -18,8 +17,6 @@ async function fetchRandomItems() {
     }).then(response => response.json());
     
     while (recipesPreview.hasChildNodes()){
-        /* recipesPreview.firstChild.className = 'remove-recipe'; */
-        
         recipesPreview.removeChild(recipesPreview.firstChild);
     }
 
