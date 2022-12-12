@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="allerhande-icon recipe-card-properties_icon__wBmG9 svg svg--svg_person" viewBox="0 0 24 24" width="24" height="16">
+    <use href="#svg_person">
+    <symbol id="svg_person" viewBox="0 0 24 24">
+        <defs>
+            <style>.cls-2{fill:none;opacity:.05}</style>
+        </defs>
+        <path d="M0 0h24v24H0z" class="cls-2"></path>
+        <path d="M0 0h24v24H0z" class="cls-2"></path>
+        <path d="M11.974 13.017a3.377 3.377 0 002.715-1.109c1.638-1.757 1.686-5.049 1.686-5.419a4.4 4.4 0 10-8.8 0c0 .371.048 3.677 1.754 5.486a3.9 3.9 0 002.645 1.042zm0-8.974a2.428 2.428 0 012.4 2.446c0 1.092-.312 3.158-1.175 4.084a1.4 1.4 0 01-1.226.444 1.839 1.839 0 01-1.256-.475c-.94-1-1.146-3.265-1.146-4.053a2.427 2.427 0 012.403-2.446zM21.994 21h-14a1 1 0 01-1-1v-1.053c0-2.027 2.611-2.939 4.464-2.939h1.084c1.854 0 4.464.912 4.464 2.939V19h2v-.051c0-3.208-3.33-4.939-6.464-4.939h-1.084c-3.134 0-6.464 1.731-6.464 4.939V20a1 1 0 01-1 1h-1a1 1 0 100 2h19z">
+    </path></symbol>
+    </use></svg>

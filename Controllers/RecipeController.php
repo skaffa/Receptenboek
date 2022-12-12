@@ -46,7 +46,7 @@ class RecipeController {
         $max = RecipeController::getMaxId();
         $ids = [];
 
-        for ( $i = 0; $i < 6; $i++) {
+        for ( $i = 0; $i < 5; $i++) {
             array_push($ids, rand(1, $max));
         }
 

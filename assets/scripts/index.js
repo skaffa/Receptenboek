@@ -30,7 +30,6 @@ async function fetchRandomItems() {
 }
 
 function createHomeItem(item) {
-    
     let div = document.createElement('div');
     div.classList.add('show-recipe');
     let a = document.createElement('a');
@@ -41,16 +40,25 @@ function createHomeItem(item) {
 
     let ul = document.createElement('ul');
     let li = document.createElement('li');
-    li.innerText = item.preptime;
+    let clock = document.createElement('img');
+    clock.src = "assets/img/clock.svg";
+    li.appendChild(clock);
+    li.innerHTML += item.preptime.replace('bereiden', '');
 
     ul.appendChild(li);
+    let cal = document.createElement('img');
     li = document.createElement('li');
-    li.innerText = item.calories;
+    cal.src = "assets/img/calorie.svg";
+    li.appendChild(cal);
+    li.innerHTML += item.calories.replace(/[^\d]/g, '');
 
     ul.appendChild(li);
 
     li = document.createElement('li');
-    li.innerText = item.portions;
+    let pers = document.createElement('img');
+    pers.src = "assets/img/persons.svg";
+    li.appendChild(pers);
+    li.innerHTML += item.portions.replace(/[^\d]/g, '');
     
     ul.appendChild(li);
 

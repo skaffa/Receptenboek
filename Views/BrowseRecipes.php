@@ -39,9 +39,20 @@ require_once(__DIR__ . "/../Controllers/RecipeController.php");
                         <a href="./Recipe.php?recipeId=<?php echo $recipe["id"] ?>">
                             <img src="<?php echo $imgSrc ?>" alt="" />
                             <ul>
-                                <li><?php echo $recipe['preptime'];?></li>
-                                <li><?php echo $recipe['calories'];?></li>
-                                <li><?php echo $recipe['portions'];?></li>
+                                <li><img src="../assets/img/clock.svg"
+                                        alt="" />
+                                    <?php echo preg_filter('/bereiden/', '', $recipe['preptime']);?>
+                                </li>
+                                <li>
+                                    <img src="../assets/img/calorie.svg" 
+                                        alt="" />
+                                    <?php echo preg_filter('/[^\d]/', '', $recipe['calories']);?>
+                                </li>
+                                <li>
+                                    <img src="../assets/img/persons.svg" 
+                                        alt="" />
+                                    <?php echo preg_filter('/[^\d]/', '', $recipe['portions']);?>
+                                </li>
                             </ul>
                         </a>
                     </div>
