@@ -55,8 +55,8 @@ class Database {
     $dbh = self::connectToDB();
     $stm = $dbh->query("SELECT 
           id, imageLink, preptime, calories, portions, title
-          FROM recipes WHERE id > " . $page * 10 - 10 . 
-          " AND id <= " . $page * 10 . ";")->fetchAll();
+          FROM recipes WHERE id > " . $page * 20 - 20 . 
+          " AND id <= " . $page * 20 . ";")->fetchAll();
     return $stm;
   }
 }

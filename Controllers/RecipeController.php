@@ -10,15 +10,19 @@ class RecipeController {
         $recipe->necessary = explode(',', $recipe->necessary);
         $recipe->preparation = explode('.,', $recipe->preparation);
         $recipe->nutrition = explode(',', $recipe->nutrition);
+        $date = date_create($recipe->added);
+        $recipe->added = date_format($date, 'd-m-Y');
+
+        if ($recipe->baketime == "") {
+            $recipe->baketime = 'geen baktijd';
+        }
         
         foreach($recipe as $key => $value) {
             
             if (is_array($value)){
                 $str = '';
                 foreach($value as $k => $v) {
-                    if ($v == "") {
-                        $str .= "<li>Geen baktijd</li>";
-                    } else {
+                    if ($v != "") {
                         $str .= "<li>$v</li>";
                     }
                 }
@@ -27,6 +31,7 @@ class RecipeController {
                 $this->replace[$key] = $value;
             }
         }
+        
         return $this->replace;
     }
 
@@ -38,16 +43,19 @@ class RecipeController {
     }
 
     public static function getHomeItemColumns () : array {
-        $max = Recipe::getMaxId();
+        $max = RecipeController::getMaxId();
         $ids = [];
 
-        for ( $i = 0; $i < 6; $i++) {
+        for ( $i = 0; $i < 5; $i++) {
             array_push($ids, rand(1, $max));
         }
 
         return Recipe::getHomeItemColumns($ids);
     }
 
+    public static function getMaxId() {
+        return Recipe::getMaxId();
+    }
     public static function getPaginationItems(int $page) : array {
         return Recipe::getPaginationItems($page);
     }
